@@ -1,0 +1,32 @@
+
+  <h1 class="create_card_name"> CREATE YOUR CARD </h1>
+  <div class="form">  
+  <%= form_for @businesscard do |f| %>
+  <table>
+    <tr><td>FIRST&nbsp;NAME:</td><td><%= f.text_field :first_name %></td></tr>
+    <tr><td>LAST&nbsp;NAME:</td><td><%= f.text_field :last_name %></td></tr>
+    <tr><td>TITLE:</td><td><%= f.text_field :title %></td></tr>
+    <tr><td>COMPANY:</td><td><%= f.text_field :company %></td></tr>
+    <tr><td>ADDRESS:</td><td><%= f.text_field :street %></td></tr>
+    <tr><td>CITY:</td><td><%= f.text_field :city %></td></tr>
+    <tr><td>STATE:</td><td><%= f.text_field :state %></td></tr>
+    <tr><td>ZIP CODE:</td><td><%= f.text_field :zip_code %></td></tr>
+    <tr><td>E-MAIL:</td><td><%= f.text_field :email %></td></tr>
+    <tr><td>WORK:</td><td><%= f.text_field :work_phone %></td></tr>
+    <tr><td>CELL:</td><td><%= f.text_field :cell_phone %></td></tr>
+    <tr><td>LINKEDIN:</td><td><%= f.text_field :linkedin %></td></tr>
+    <tr><td>FACEBOOK:</td><td><%= f.text_field :facebook %></td></tr>
+    <tr><td>TWITTER:</td><td><%= f.text_field :twitter %></td></tr>
+    <tr><td>INSTAGRAM:</td><td><%= f.text_field :instagram %></td></tr>
+    <tr><td>WEBSITE:</td><td><%= f.text_field :website %></td></tr>
+    <tr><td>UPLOAD&nbsp;IMAGE:</td><td><%= f.file_field :background%></td></tr>
+  </table>
+ 
+
+<div class="save">
+  <%= f.submit "SAVE" %>
+</div>
+
+  <% end %>
+
+ 

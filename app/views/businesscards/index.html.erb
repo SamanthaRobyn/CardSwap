@@ -1,0 +1,62 @@
+
+<h1 class="my_business_cards">MY BUSINESS CARDS</h1>
+<%= @user.businesscards.each do |b| %>
+<div class ="add">
+  
+
+  <% if ! b.first_name.blank? %>
+    <%= b.first_name %>
+    <%end%>
+  <% if ! b.last_name.blank? %>
+    <%= b.last_name %><br>
+    <%end%>
+  <% if ! b.title.blank? %>
+    <%= b.title %><br>
+    <%end%>
+  <% if ! b.company.blank? %>
+    <%= b.company %><br>
+    <%end%>
+  <% if ! b.street.blank? %>
+    <%= b.street %><br>
+    <%end%>
+  <% if ! b.city.blank? %>
+    <%= b.city %>
+    <%end%>
+  <% if ! b.state.blank? %>
+    <%= b.state %>
+    <%end%>
+  <% if ! b.zip_code.blank? %>
+    <%= b.zip_code %><br>
+    <%end%>
+  <% if ! b.email.blank? %>
+    e:<%= b.email %><br>
+    <%end%>
+  <% if ! b.work_phone.blank? %>
+    w:<%= b.work_phone %><br>
+    <%end%>
+  <% if ! b.cell_phone.blank? %>
+    c:<%= b.cell_phone %><br>
+    <%end%>
+  <% if ! b.linkedin.blank? %>
+    <%= b.linkedin %><br>
+    <%end%>
+  <% if ! b.facebook.blank? %>
+    <%= b.facebook %><br>
+    <%end%>
+  <% if ! b.twitter.blank? %>
+    <%= b.twitter %><br>
+    <%end%>
+  <% if ! b.instagram.blank? %>
+    <%= b.instagram %><br>
+    <%end%>
+  <% if ! b.website.blank? %>
+    <%= b.website %><br>
+    <%end%>   
+  <%if ! b.background.blank? %>
+    <%= image_tag b.background.url, style: "width: 200px;" %>
+    <% end %>
+
+<center><%= link_to "Delete", b, method: :delete, data: { confirm: "Are you sure you want to delete?"} %></center>
+</div>
+
+<% end %>

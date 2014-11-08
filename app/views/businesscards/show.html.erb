@@ -1,0 +1,60 @@
+
+<div class="actualcard_element">
+  <h1>MY BUSINESS CARDS</h1>
+  <% if ! @businesscard.first_name.blank? %>
+    <%= @businesscard.first_name %>
+    <%end%>
+  <% if ! @businesscard.last_name.blank? %>
+    <%= @businesscard.last_name %><br>
+    <%end%>
+  <% if ! @businesscard.title.blank? %>
+    <%= @businesscard.title %><br>
+    <%end%>
+  <% if ! @businesscard.company.blank? %>
+    <%= @businesscard.company %><br>
+    <%end%>
+  <% if ! @businesscard.street.blank? %>
+    <%= @businesscard.street %><br>
+    <%end%>
+  <% if ! @businesscard.city.blank? %>
+    <%= @businesscard.city %>
+    <%end%>
+  <% if ! @businesscard.state.blank? %>
+    <%= @businesscard.state %>
+    <%end%>
+  <% if ! @businesscard.zip_code.blank? %>
+    <%= @businesscard.zip_code %><br>
+    <%end%>
+  <% if ! @businesscard.email.blank? %>
+    e:<%= @businesscard.email %><br>
+    <%end%>
+  <% if ! @businesscard.work_phone.blank? %>
+    w:<%= @businesscard.work_phone %><br>
+    <%end%>
+  <% if ! @businesscard.cell_phone.blank? %>
+    c:<%= @businesscard.cell_phone %><br>
+    <%end%>
+  <% if ! @businesscard.linkedin.blank? %>
+    <%= @businesscard.linkedin %><br>
+    <%end%>
+  <% if ! @businesscard.facebook.blank? %>
+    <%= @businesscard.facebook %><br>
+    <%end%>
+  <% if ! @businesscard.twitter.blank? %>
+    <%= @businesscard.twitter %><br>
+    <%end%>
+  <% if ! @businesscard.instagram.blank? %>
+    <%= @businesscard.instagram %><br>
+    <%end%>
+  <% if ! @businesscard.website.blank? %>
+    <%= @businesscard.website %><br>
+    <%end%>   
+  <% if ! @businesscard.background.blank? %>
+    <%= image_tag @businesscard.background.url, style: "width: 200px;" %>
+    <% end %>
+    
+</div>
+    
+
+
+
