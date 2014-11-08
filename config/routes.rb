@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :businesscards  
   resources :users
-  resource :sessions, only: [:create, :new, :destroy]
+  resource :sessions
 
   get 'pages/home', as: :home
   get 'pages/about', as: :about
