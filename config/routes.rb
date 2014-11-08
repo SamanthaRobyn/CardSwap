@@ -2,10 +2,6 @@ Rails.application.routes.draw do
 
   root 'businesscards#index'
 
-
-
-  
-
   resources :businesscards  
   resources :users
   resource :sessions, only: [:create, :new, :destroy]
