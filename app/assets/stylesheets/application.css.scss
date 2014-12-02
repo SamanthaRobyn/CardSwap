@@ -5,7 +5,9 @@
 @import 'bootstrap';
 
 body {
-  background-color: beige;
+  background-image: url('http://akwos.com/images/2014/03/decoration-modern-office-table-design-contemporary-office.jpg'); 
+  // background-size: 100%;
+  background-position: cover;
   font-family: 'Anonymous Pro';
  }
  
@@ -16,7 +18,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    opacity: 0.9;
+    opacity: 0.6;
     color: black;
     border-radius: 50px;
     font-family: 'Anonymous Pro';
@@ -57,7 +59,7 @@ body {
 .home {
   position: absolute;
   top: 65px;
-  right: 20px;
+  right: 24px;
   left: 30px;
   font-size: 50px;
   color: black;
@@ -92,7 +94,7 @@ body {
 
 .form {
   position: absolute;
-  top: 200px;
+  top: 160px;
   left: 150px;
   right: 100px;
   width: 100%;
@@ -108,7 +110,7 @@ body {
   font-family: 'Anonymous Pro'; 
   position: absolute;
   top: 80px;
-  left: 500px;
+  left: 560px;
 }
 
 .signup_form {
@@ -171,7 +173,7 @@ body {
 
 .cardswap_header h1 {
   color: white;
-  left: 480px;
+  left: 550px;
   top: -10px;
   font-size: 70px;
   font-family: 'Anonymous Pro';

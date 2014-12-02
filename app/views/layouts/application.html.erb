@@ -6,61 +6,61 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type='application.css.scss'>
- <link href='//fonts.googleapis.com/css?family=Anonymous+Pro:400,400italic' rel='stylesheet' type='application.css.scss'>
+  <link href='//fonts.googleapis.com/css?family=Anonymous+Pro:400,400italic' rel='stylesheet' type='application.css.scss'>
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 </head>
 <body style= "background-color: beige">
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
 
-    <div class="userlogin">
-     <% if current_user %>
-        <div class="current_user">
+      <div class="userlogin">
+       <% if current_user %>
+       <div class="current_user">
         <%= current_user.email %>
       </div>
-        <%= link_to "LOGOUT |", sessions_path, method: :delete %>
-         <%=link_to "CREATE NEW CARD", new_businesscard_path %>
+      <%= link_to "LOGOUT |", sessions_path, method: :delete %>
+      <%=link_to "CREATE NEW CARD", new_businesscard_path %>
       <% else %>
-        <%= link_to "SIGNUP |", new_user_path%>  <%= link_to "LOGIN", account_path %>
-         <% flash.each do |name,msg| %>
-            <%= content_tag :div, msg, id: "flash_#{name}" %>
+      <%= link_to "SIGNUP |", new_user_path%>  <%= link_to "LOGIN", account_path %>
+      <% flash.each do |name,msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
 
-        <% end %>
-       <% end %>
+      <% end %>
+      <% end %>
     </div>
-   
-     <div class="cardswap_header">
+    
+    <div class="cardswap_header">
       <h1>CARD SWAP</h1>
     </div>
-        <div id="user_header">
-        </div>
+    <div id="user_header">
+    </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
-   <div class="navigation"> 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li>
+    <div class="navigation"> 
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
           </div>
           <ul>
-          <a href="/pages/home" class="icon">
-            <span class="glyphicon glyphicon-home">
-          </a>
-          <a href= "/businesscards" class="user_icon">
-            <span class="glyphicon glyphicon-user">
-            </span>
-          </span>
-          </a>
+            <a href="/pages/home" class="icon">
+              <span class="glyphicon glyphicon-home">
+              </a>
+              <a href= "/businesscards" class="user_icon">
+                <span class="glyphicon glyphicon-user">
+                </span>
+              </span>
+            </a>
           </ul>
         </li>
-    </div>
+      </div>
       <form class="navbar-form navbar-left" role="search">
       </form>
       <ul class="nav navbar-nav navbar-right">
@@ -68,7 +68,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-    
+
 </div>
 <div id="user_header">
 </div>

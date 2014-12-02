@@ -1,35 +1,35 @@
 <div class="outerform">
-<div class="form">
-<h1 class="login_name">LOGIN</h1>
-</div>
+  <div class="form">
+    <h1 class="login_name">LOGIN</h1>
+  </div>
 
-<%= form_for(@user, {url:sessions_path}) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  <%= form_for(@user, {url:sessions_path}) do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+    <div class="login">
+      <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :password %><br>
+        <%= f.password_field :password %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "SUBMIT" %>
     </div>
-  <% end %>
-
-
-<div class="login">
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "SUBMIT" %>
-</div>
   </div>
 <% end %>
 </div>
