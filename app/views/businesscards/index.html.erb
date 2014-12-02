@@ -2,7 +2,7 @@
 <h1 class="my_business_cards">MY BUSINESS CARDS</h1>
 <%= @user.businesscards.each do |b| %>
 <div class ="add">
-  
+  <!-- this is the actual business card that was created -->
   <% if ! b.first_name.blank? %>
     <%= b.first_name %>
     <%end%>
